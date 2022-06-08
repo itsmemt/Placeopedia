@@ -21,6 +21,8 @@ from django.contrib.auth import views
 #For server
 from django.views.static import serve
 from django.conf.urls import url
+
+from Placeopedia import settings
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^company/',include('company.urls')),
