@@ -1,1 +1,1 @@
-web: gunicorn Training.wsgi --log-file -
+web: gunicorn Placeopedia.wsgi --log-file -

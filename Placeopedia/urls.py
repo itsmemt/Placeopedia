@@ -29,7 +29,7 @@ urlpatterns = [
     re_path(r'^student/',include('student.urls')),
     re_path(r'^contact/',include('contact.urls')),
     re_path(r'^training/',include('training.urls')),
-    re_path(r'^$',include('home.urls')),
+    re_path(r'^',include('home.urls')),
 
 
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
