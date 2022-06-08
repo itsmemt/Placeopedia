@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Companies Login{% endblock %}
+{% block home %} {% endblock %}">
+{% block students %} {%endblock %}
+{% block companies %} active {%endblock %}
+{% block training %} {%endblock %}
+{% block contact %} {%endblock %}
+
+{% block body%}
+
+<div class="container-fluid">
+    <div class="row modal-body">
+
+        <div class="col-md-6">
+            <img src="/static/home/images/bg.jpg" alt="" height="100%" width="100%">
+        </div>
+        <!-- <div class="col-md-6"
+            style="background-image: url(/static/home/images/bg.jpg) ;background-repeat: no-repeat; background-size: cover; height: 58vh; width: 40vw; opacity: .7;">
+            <br> 
+            <h2 style=" color: black;"> <b> &nbsp; &nbsp; Companies Section</b></h2>
+             <br><hr > 
+            <b style=" color:navy;">  >Welcome to our Recruiter's Login Page.Here you Can regester yourself.And Once you get verified from the admin.You can login from here.And you can post new jobs and can see the students who applied for the job.And you can shortlist them as well.</p></b>
+        </div> -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2><strong>Recruiter Login</strong></h2>
+                    <br>
+                    <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form }}
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-5 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                    <a href="{% url 'company:signup_page' %}">New Recruiter Registration</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style=" background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); height:10px; width: 100vw; " >
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

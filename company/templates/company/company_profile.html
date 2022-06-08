@@ -1,0 +1,43 @@
+{% extends 'home/recruiter_profile.html' %}
+
+
+
+{% block name %}
+{{username}}
+{% endblock %}
+
+{%block main_body%}
+
+<div class="listing">
+    <div class="form-group">
+        <div class="">
+            <span class="text-danger small">
+                {{ form.errors }}
+            </span>
+        </div>
+        <div class="">
+            <div class="lead page-header">
+            Company Name
+        </div>
+
+            <div class="">{{ form.c_company_name }}</div>
+        </div>
+        <div class="">
+            <div class="lead page-header">
+
+            Company Description
+            </div>
+            <div class="">{{ form.c_details }}</div>
+        </div>
+        <div class="">
+            <div class="lead page-header">
+            Contact Details
+            </div>
+            <div class="">{{ form.c_email }}</div>
+            <div class="">{{ form.c_contact }}</div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- p>Click <a href ="{% url 'student:logout' %}">Here</a> To Logout</p -->

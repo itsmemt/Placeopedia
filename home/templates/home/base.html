@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}PlaceoPedia{% endblock %}</title>
+    {% block meta %}
+    {% endblock %}
+
+    <meta name="Placement Cell" content="A website for hiring process">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Average|Courgette' rel='stylesheet' type='text/css'>
+
+    <!--Load the path to static files -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {% block javascript %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!--header -->
+            <div class="navbar-header">
+                <!-- change url here -->
+                <a class="navbar-brand" href="{% url 'home:homepage' %}">
+                    <p class="para" id="title"><span style="color: purple;">&#9763;</span> <span style="color:pink"
+                            class="para">P</span>laco<span style="color:violet" class="para">P</span>edia</p>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                </button>
+            </div>
+            <!-- items -->
+            <div class="collapse navbar-collapse mymenu" id="topNavBar">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="{% block home %} {% endblock %}" style="background-color:pink;">
+                        <a href="{% url 'home:homepage' %}">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;<span
+                                style="font-weight: 600;">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" style="background-color: pink; margin-left: 2px;" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i>
+                            <b>Placement</b> <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">
+                            </li>
+                            <li class="{% block students %} {% endblock %}" style="background-color:pink;">
+                                <a href="{% url 'student:student_login' %}">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; <span
+                                        style="font-weight: 600;">Students</span>
+                                </a>
+                            </li>
+
+                            
+                            <li class="" style="background-color:pink;">
+                                <a href="/admin">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; <span
+                                        style="font-weight: 600;">Admin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="{% block companies %} {% endblock %}" style="background-color:pink; margin-left: 2px;">
+                        <a href="{% url 'company:login_page' %}">
+                            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp; <span
+                                style="font-weight: 600;">Companies</span>
+                        </a>
+                    </li>
+                    <li class="{% block training %} {% endblock %}" style="background-color:pink;  margin-left: 2px;">
+                        <a href="https://placeopedia-training.herokuapp.com/" target="_blank">
+                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp; <span
+                                style="font-weight: 600; margin-left: 1px;">Training</span>
+                        </a>
+                    </li>
+                   
+                  
+                  
+
+                    <li class="{% block contact %} {% endblock %}" style="background-color:pink; margin-left: 2px;">
+                        <a href="{% url 'contact:contact' %}">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp; <span
+                                style="font-weight: 600;">Contact Us</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block body%}
+
+    {% endblock %}
+    {% include 'home/footer.html' %}
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
