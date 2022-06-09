@@ -201,28 +201,6 @@ def successfull_change(request):
     else:
         return render(request, 'student/unauthorized.html')
      
-'''
-    username= request.POST.get('username','')
-    password = request.POST.get('password','')
-    user=auth.authenticate(username=username,password=password)
-
-    if user is not None:
-        auth.login(request,user)
-        return HttpResponseRedirect('/student/loggedin')
-    else:
-        return HttpResponseRedirect('/student/invalid')
-
-
-def loggedin(request):
-    return render_to_response('student/loggedin.html',{'full_name': request.user.username})
-
-def invalid_login(request):
-    return render_to_response('student/invalid_login.html')
-
-def logout(request):
-    auth.logout(request)
-    return render_to_response('student/logout.html')
-'''
 def notify(request,username):
     if request.session.has_key('username'):
         user = request.session['username']
@@ -304,7 +282,7 @@ def download(request):
     return response
 
 def resumed(request,username):
-    path_to_file='C:\\Users\\thaku\\Desktop\\Test Run\\Place0pedia\\media\\documents\\'+username+'.pdf'
+    path_to_file='C:\\Users\\thaku\\Desktop\\Test Run\\Placeopedia\\media\\documents\\'+username+'.pdf'
     f = open(path_to_file, 'rb')
     print(f.readlines())
     myfile = File(f)

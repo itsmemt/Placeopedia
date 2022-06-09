@@ -6,11 +6,9 @@ from .models import Register,Job_desc
 from django.contrib.auth.decorators import login_required
 import random
 from student.models import StudentDB, Edit_Details,Notifications, AppliedJob
-from django.core.mail import send_mail
 # Create your views here.
 def post_list(request):
     status = 200
-    print('hello')
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = Postform(request.POST)

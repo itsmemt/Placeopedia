@@ -17,7 +17,6 @@ class Register(models.Model):
     c_password=models.CharField(max_length=30,blank=True)
     c_confirm_password=models.CharField(max_length=30,blank=True)
     c_ppt = models.FileField(upload_to="documents/", blank=True)
-    #c_file = models.FileField(upload_to="documents/",blank=True)
     def __str__(self):
         return str(self.c_name)
 
@@ -47,7 +46,7 @@ class Job_desc(models.Model):
     date_published = models.DateField(null=True)
     date_expiry=models.DateField(null=True)
     c_ctc_offered = models.DecimalField(decimal_places=2, max_digits=8, blank=True,null=True)
-    c_branch = models.CharField(max_length=10, choices=BRANCH, default='P')  # search for creating drop down menu
-    c_course = models.CharField(max_length=5, choices=COURSE, default='PG')  # search for drop down PG UG
+    c_branch = models.CharField(max_length=10, choices=BRANCH, default='P') 
+    c_course = models.CharField(max_length=5, choices=COURSE, default='PG')  
     def __str__(self):
         return str(self.c_position)
