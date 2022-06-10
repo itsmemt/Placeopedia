@@ -46,7 +46,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Placeopedia.urls'
 CSRF_COOKIE_SECURE=True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 TEMPLATES = [

@@ -1,35 +1,57 @@
-
-{% extends 'home/base.html' %}
-
-{% block title %}Home{% endblock %}
-{% block home %} active{% endblock %}
-
+<title>Homepage</title>
+{% extends 'home/base.html' %}}
+{% block home %} active {% endblock %}
 {% block body%}
 
+
 <div class="row">
-    <div class="col-md-12"  style="background-image: url(/static/home/images/bg1.jpg) ;background-repeat: no-repeat; background-size: cover; height: 80vh; width: 100vw; opacity: .5; background-position: center;">
+    <div class="col-md-12" style=" background-position: center;
+        width: 100%;
+        height: 130vh;
+    background-image: linear-gradient(
+ rgba(5,0,136,0.5),rgba(5,0,136,0.5)),
+ url(/static/home/images/bg1.jpg);
+    background-size: cover;
+    overflow: hidden;">
         <div class="row">
-            <!-- <div class="col-md-6"></div> -->
-            <br><br>
-            <center>
-            <div class=" col-md-offset-5 col-md-6" >
-                <b style=" color: black;">  >We Welcome you to PlaceOpedia i.e. Placement Cell Website of Institute of Informatics and Communication(IIC).Where we can Learn and grow together. Here we have seperate sections for Students and Recruiter's.</p></b>
-                <!-- <br> -->
-                <h3 style="color: green; text-decoration: underline;">Student Section</h3>
-                <p> # We have student sections pirticularly for our Students.Where one Register themselve and can login.</p>
-                <h3 style="color: green; text-decoration: underline;">Companies Section</h3>
-                <p># We have student sections pirticularly for our Recruiter's.Who can regester themselves and post their jobs.</p>
-                <h3 style="color: green; text-decoration: underline;">Training Section</h3>
-                <p># We have Training sections pirticularly for our Students.Where you can learn new technologies and evaluate yourself attempting some mock test designed for you.</p>
-               
+            <div class="col-md-6" style="   margin-top: 5%;
+                margin-left: 8%;
+                color:white;">
+                <h1 style="font-size: 6vw;
+                line-height: 5vw;
+                font-weight: 600;
+                color: bisque;">Welcome  to <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Placeopedia</h1>
+                <br>
+                <br>
+                
             </div>
-          </center>
+            <div class=" col-md-offset-5 col-md-6">
+                <center>
+                <p style=" max-width: 50rem;
+                line-height: 2rem; color: white;">This website is desigined in such a way that
+                    one need not to worry about placement related queries as it is one
+                    shop stop.Placement Cell Website of Institute
+                    of Informatics and Communication(IIC).Where we can Learn and grow together. Here we have
+                    seperate sections for Students and Recruiter's.
+                </p>
+                <h3 style="color:yellow; text-decoration: underline;">Student Section</h3>
+                <p> # We have student sections particularly for our Students.Where one Register themselve and can
+                    login.</p>
+                <h3 style="color:yellow; text-decoration: underline;">Companies Section</h3>
+                <p># We have Company sections particularly for our Recruiter's.Who can register themselves and post
+                    their jobs.</p>
+                <h3 style="color: yellow; text-decoration: underline;">Training Section</h3>
+                <p># We have Training sections particularly for our Students.Where you can learn new technologies
+                    and evaluate yourself attempting some mock test designed for you.</p>
+                </center>
+            </div>
         </div>
     </div>
-   
+
 </div>
 <div class="row">
-    <div class="col-md-12" style=" background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); height:10px; width: 100vw; " >
+    <div class="col-md-12"
+        style=" background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); height:10px; width: 100vw; ">
     </div>
 </div>
 {% endblock %}
