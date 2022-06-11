@@ -1,4 +1,4 @@
-"""PMS URL Configuration
+"""Placeopedia URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -28,7 +28,6 @@ urlpatterns = [
     re_path(r'^company/',include('company.urls')),
     re_path(r'^student/',include('student.urls')),
     re_path(r'^contact/',include('contact.urls')),
-    re_path(r'^training/',include('training.urls')),
     re_path(r'^',include('home.urls')),
 
 

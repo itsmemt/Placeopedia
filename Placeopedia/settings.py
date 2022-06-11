@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'company','contact','student','home','training',
+    'company','contact','student','home',
     'bootstrap3', 
 
 ]
@@ -46,7 +46,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Placeopedia.urls'
 CSRF_COOKIE_SECURE=True
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 TEMPLATES = [
