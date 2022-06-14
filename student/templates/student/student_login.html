@@ -13,7 +13,7 @@
     <div class="row modal-body">
 
         <div class="col-md-6">
-            <img src="/static/home/images/bg2.jpg" alt="" height="100%" width="100%">
+            <img src="/static/home/images/bg2.jpg" alt="" height="360rem" width="100%">
 
         </div>
 
@@ -24,32 +24,29 @@
              <br><hr > 
             <b style=" color: purple ;">  >Welcome to our Student's Login Page.Here you Can regester yourself.And Once you get verified from the admin.You can login from here.And you can apply for new jobs and can see the list of jobs posted by the companies. You can upload your resume as well.</p></b>
         </div> -->
-        <div class="col-md-6">
-            <div class="panel panel-default">
+        <div class="col-md-6" style="background-color: slategray;">
+            <div class="panel panel-default" style="background-color: slategray; margin-top: 10px;">
                 <div class="panel-body">
-                    <h2><strong>Student Login</strong></h2>
-                    <br>
+                    <h2 style="color:Yellow;"><strong>Student Login</strong></h2>
+                    <hr>
                     {% if form.errors %}
                     <p class="error">Invalid username or password</p>
                     {% endif %}
                     <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
                         <!--this is for security pupose against click jacking -->
                         {% csrf_token %}
-                        {{ form }}
-                        <!--     <label class="control-label col-sm-4" for="username"> User name</label>
-                        <div class="col-sm-8"> <input type="text" name="username" value="" id="username" ></div>
-                        <label class="control-label col-sm-4" for="password"> Password </label>
-                         <div class="col-sm-8"><input type="password" name="password" value="" id="password" ></div>
--->
+                       <i style="color: aliceblue;"> {{ form }}</i>
+                    
 
                         <div class="form-group">
                             <div class="col-sm-offset-5 col-sm-10">
+                                <br>
                                 <button type="submit" class="btn btn-primary ">Login</button>
                             </div>
                         </div>
                     </form>
-                    <div class="col-sm-offset-0">
-                        <a href="{% url 'student:student_register' %}">New Student Registration..</a>
+                    <div  class="col-sm-offset-0">
+                        <a style="color:pink;" href="{% url 'student:student_register' %}">New Student Registration..</a>
                     </div>
                 </div>
             </div>

@@ -10,27 +10,28 @@
 {% load bootstrap3 %}
 
 {%block main_body%}
-    <div style="background: black;">
-    <div class="listing container-fluid">
-    <h3>EDIT DETAILS!</h3>
-        <div style="color: black; vertical-align: middle;">
-            <form  class="form-horizontal" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
+<div style=" margin-top: -120px; ">
+    <div class="listing" style="background-color:slategray;">
+        <h3 style="color:yellow; text-align: center;">EDIT DETAILS!</h3>
+        <hr>
+        <div style="vertical-align: middle;">
+            <form style="padding-left:10% ;"class="form-horizontal" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
 
-            {% for field in form %}
-        <div class="text-primary" style="vertical-align: middle;">
-            <label class="text-primary">{{ field.label }}</label>
-            {{ field }}
+                {% for field in form %}
+                <div class="text-primary" style="vertical-align: middle;">
+                    <label style=" color:black ;">{{ field.label }}</label>
+                    <i style=" color:black ;">{{ field }}</i>
+                </div>
+                {% endfor %}
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+
+                </div>
+            </form>
         </div>
-    {% endfor %}
-         <div class="form-group">
-                            <div class="col-sm-offset-5 col-sm-10">
-        <button type="submit" class="btn btn-success">Submit</button>
-                            </div>
-
-         </div>
-</form>
-</div>
     </div>
 </div>
 {% endblock %}

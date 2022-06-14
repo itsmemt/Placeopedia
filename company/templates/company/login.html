@@ -13,7 +13,7 @@
     <div class="row modal-body">
 
         <div class="col-md-6">
-            <img src="/static/home/images/bg.jpg" alt="" height="100%" width="100%">
+            <img src="/static/home/images/bg.jpg" alt="" height="368rem" width="100%">
         </div>
         <!-- <div class="col-md-6"
             style="background-image: url(/static/home/images/bg.jpg) ;background-repeat: no-repeat; background-size: cover; height: 58vh; width: 40vw; opacity: .7;">
@@ -22,22 +22,23 @@
              <br><hr > 
             <b style=" color:navy;">  >Welcome to our Recruiter's Login Page.Here you Can regester yourself.And Once you get verified from the admin.You can login from here.And you can post new jobs and can see the students who applied for the job.And you can shortlist them as well.</p></b>
         </div> -->
-        <div class="col-md-6">
-            <div class="panel panel-default">
+        <div class="col-md-6" style="background-color:slategrey;">
+            <div class="panel panel-default"  style="background-color:slategrey; margin-top: 15px;">
                 <div class="panel-body">
-                    <h2><strong>Recruiter Login</strong></h2>
-                    <br>
+                    <h2  style="color:yellow;"><strong>Recruiter Login</strong></h2>
+                    <hr>
                     <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ form }}
+                        <i style="color:white;">{{ form }}</i>
 
                         <div class="form-group">
                             <div class="col-sm-offset-5 col-sm-10">
+                                <br>
                                 <button type="submit" class="btn btn-primary">Login</button>
                             </div>
                         </div>
                     </form>
-                    <a href="{% url 'company:signup_page' %}">New Recruiter Registration</a>
+                    <a  style="color:pink;" href="{% url 'company:signup_page' %}">New Recruiter Registration</a>
 
                 </div>
             </div>

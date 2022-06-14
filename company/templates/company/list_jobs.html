@@ -7,9 +7,9 @@
 {%block main_body%}
 
 <div class="table-responsive listing">
-<h1 class="page-header lead">Posted Job List</h1>
-    <table class="table table-bordered">
-    <tr>
+<h1 class="bg-primary text-center" style="font-size:3rem ;color:yellow; margin-top:-70px; padding-bottom: 15px; padding-top: 10px; ">Posted Job List</h1>
+    <table class="table table-bordered bg-primary">
+    <tr style="color: pink;">
         <th>Job ID</th>
         <th>Job Position</th>
         <th>Company ID</th>
@@ -18,7 +18,7 @@
         <th>Branch Required</th>
         <th>Publish Date</th>
         <th>Expiry Date</th>
-        <th>Students Applied</th>
+        <!-- <th>Students Applied</th> -->
     </tr>
     {% for item in form %}
     <tr>
@@ -30,7 +30,7 @@
         <td>{{ item.c_branch }}</td>
         <td>{{ item.date_published }}</td>
         <td>{{ item.date_expiry }}</td>
-        <td><a href="/company/student_list/{{ item.id }}">View</a></td>
+        <!-- <td><a style="color: yellowgreen ; " href="/company/student_list/{{ item.id }}">View</a></td> -->
 
     </tr>
     {% endfor %}

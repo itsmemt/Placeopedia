@@ -29,15 +29,16 @@
     <div id="backgroundImage">
 
 
-        <div class="container-fluid">
-            <div class="row modal-body">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
+        <div class="container-fluid" >
+            <div class="row modal-body" >
+                <div class="col-md-6" style="background-color: slategray; padding-top: 20px; margin-left: 25%;">
+                    <div class="panel panel-default" style="background-color: slategray;">
                         <div class="panel-body">
-                            <h2 class="heading col-sm-offset-2"><strong>New Student Registration</strong></h2>
-                            <br>
+                            <hr>
+                            <h2 class="heading col-sm-offset-2"><strong style="color:yellow;">New Student Registration</strong></h2>
+                            <hr>
 
-                            <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
+                            <form  class="form-horizontal " action="" method="post" enctype="multipart/form-data">
                                 <!--this is for security pupose against click jacking -->
                                 {% csrf_token %}
                                 <div class="text-primary container-fluid row" style="vertical-align: middle;">
@@ -51,7 +52,7 @@
                                 {% for field in form %}
                                     <div class="text-primary container-fluid row" style="vertical-align: middle;">
                                         <div class="col-sm-3">
-                                            <label class="text-primary">{{ field.label }}</label>
+                                            <label style="color: pink; font-weight: 400;">{{ field.label }}</label>
                                         </div>
                                         <div class="col-sm-3">
                                             {{ field }}
@@ -61,7 +62,8 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-5 col-sm-10">
-                                        <button type="submit" class="btn btn-success">Register</button>
+                                        <br>
+                                        <button  type="submit" class="btn btn-success">Register</button>
                                     </div>
                                 </div>
                             </form>

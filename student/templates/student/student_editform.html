@@ -1,5 +1,5 @@
 {% extends 'home/user_profile.html' %}
-{% block title %}    Hi {{ username }} {% endblock %}
+{% block title %} Hi {{ username }} {% endblock %}
 {% block name %}
 {{username}}
 {% endblock %}
@@ -7,21 +7,22 @@
 
 {%block main_body%}
 
-<div >
-    <div class="listing container-fluid" >
-    <h3>EDIT DETAILS</h3>
+<div>
+    <div class="listing container-fluid" style="background-color:slategrey ;">
+        <h3 style="color: yellow;">EDIT DETAILS</h3>
+        <hr>
         <div style="color: white;">
-    <form  class="form-horizontal" method="POST" action="/student/success/" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_ul }}
-         <div class="form-group">
-                            <div class="col-sm-offset-5 col-sm-10">
-        <button type="submit" class="btn btn-success">Submit</button>
-                            </div>
+            <form style="margin-left: 10px;" class="form-horizontal" method="POST" action="/student/success/" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
 
-         </div>
-</form>
-</div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

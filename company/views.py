@@ -188,7 +188,7 @@ def listjobs(request):
         m=Register.objects.get(c_name=user)
         tmp= Job_desc.objects.filter(register=m)
         form=list(tmp.values())
-        print(form)
+        # print(form)
         return render(request, 'company/list_jobs.html', {'form':form,'username':user})
     else:
         return HttpResponse('Unauthorised Access')

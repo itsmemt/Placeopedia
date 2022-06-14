@@ -273,7 +273,7 @@ def view_stud_details(request,username):
     return render(request, 'student/stud_view.html', {'form':form,'username':username})
 
 def download(request):
-    path_to_file='C:\\Users\\thaku\\Desktop\\Test Run\\Place0pedia\\media\\documents\\1.txt'
+    path_to_file='C:\\Users\\thaku\\Desktop\\Test Run\\Placeopedia\\media\\documents\\1.txt'
     f = open(path_to_file, 'rb')
     print(f.readlines())
     myfile = File(f)

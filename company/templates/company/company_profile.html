@@ -1,7 +1,4 @@
 {% extends 'home/recruiter_profile.html' %}
-
-
-
 {% block name %}
 {{username}}
 {% endblock %}
@@ -15,29 +12,28 @@
                 {{ form.errors }}
             </span>
         </div>
-        <div class="">
-            <div class="lead page-header">
-            Company Name
-        </div>
-
-            <div class="">{{ form.c_company_name }}</div>
-        </div>
-        <div class="">
-            <div class="lead page-header">
-
-            Company Description
+        <div class="bg-primary" style="margin-top: -85px; padding-top:.1rem; ">
+            <div class="text-center">
+                <h3  style="color: yellow;">Company Name : {{ form.c_company_name }}</h3>
             </div>
-            <div class="">{{ form.c_details }}</div>
+            <hr>
         </div>
-        <div class="">
-            <div class="lead page-header">
-            Contact Details
-            </div>
-            <div class="">{{ form.c_email }}</div>
-            <div class="">{{ form.c_contact }}</div>
 
+        <div class="bg-primary">
+            <div class="lead page-header">
+
+              <u  style="color: yellow;">  Company Description</u> <br>
+                <i style="font-size:15px ;margin-left:10px; ">{{ form.c_details }}</i>
+            </div>
+        </div>
+        <div class="bg-primary">
+            <div class="lead page-header">
+               <u style="color: yellow;"> Contact Details</u> <br>
+               <i style="font-size:15px ;margin-left:10px;">{{ form.c_contact }} </i><br>
+               <i style="font-size:15px ;margin-left:10px; ">{{ form.c_email }} </i>
+                
+            </div>
         </div>
     </div>
 </div>
 {% endblock %}
-<!-- p>Click <a href ="{% url 'student:logout' %}">Here</a> To Logout</p -->

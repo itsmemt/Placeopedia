@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.urls import include, re_path
 from django.contrib import admin
-from django.views.generic import TemplateView
-from django.contrib.auth import views
 
 #For server
 from django.views.static import serve
@@ -31,15 +29,11 @@ urlpatterns = [
     re_path(r'^',include('home.urls')),
 
 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}), 
     
-
 ]
-
 # Admin panel redesign
 admin.site.site_header="Admin Login"
 admin.site.site_title="Placement Cell Portal"
 admin.site.index_title="Admin Panel"
-
-

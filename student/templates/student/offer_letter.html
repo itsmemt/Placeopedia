@@ -5,17 +5,17 @@
 
 {%block main_body%}
 
-<div class="table-responsive listing">
-<h1 class="page-header lead">List Of Applied Jobs</h1>
+<div style="background-color:slategrey;" class="table-responsive listing">
+<h3 style="color:yellow; text-align: center; padding-top: 10px;" class="page-header">List Of Applied Jobs</h3>
 <table class="table table-bordered">
-    <tr>
+    <tr style="color: pink;">
         <th>Username</th>
         <th>Job ID</th>
         <th>Got Offer</th>
 
     </tr>
     {% for item in form %}
-    <tr>
+    <tr  style="color: pink;">
         <td>{{ username}}</td>
         <td>{{ item.jobid }}</td>
         <td>{% if item.got_offer == "No" %}No {% else %} <a href="/student/download/">DOL</a> {% endif %}</td>
