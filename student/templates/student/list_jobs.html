@@ -6,7 +6,7 @@
 {%block main_body%}
 
 <div  style="background-color: slategray;"class="table-responsive listing">
-<h4  style="color: yellow; text-align: center; padding-top: 10px;" class="page-header ">List Of Jobs</h4>
+<h3  style="color: yellow; text-align: center; padding-top: 10px;" class="page-header ">List Of Jobs</h3>
 <table class="table table-bordered">
     <tr  style="color: pink;">
         <th>Job ID</th>
@@ -19,7 +19,7 @@
 
     </tr>
     {% for item in form %}
-    <tr>
+    <tr style="color:wheat;">
         <td>{{ item.id}}</td>
         <td>{{ item.c_position }}</td>
         <td>{{ item.register_id }}</td>

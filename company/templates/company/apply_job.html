@@ -5,23 +5,29 @@
 
 {%block main_body%}
 
-<div class="listing">
+<div class="listing" style="background-color: slategrey;">
     {% for item in form %}
-        <div class="lead page-header">Job ID</div>
-        <div>{{ item.id}}</div>
-        <div class="lead page-header">Company Name</div>
-        <div>{{ company }}</div>
-        <div class="lead page-header">Job Position</div>
-        <div>{{ item.c_position }}</div>
+        <div style="color: white;margin-left: 10px;">Job ID :<span style="color:yellow;" > &nbsp  {{ item.id}}</span> </div>
 
-        <div class="lead page-header">Job Description</div>
-        <div>{{ item.c_description }}</div>
-        <div class="lead page-header">CTC offered </div>
-        <div>{{ item.c_ctc_offered }}</div>
-        <div class="lead page-header">Degree Required</div>
-        <div>{{ item.c_course }}</div>
-        <div class="lead page-header">Branch Required</div>
-        <div>{{ item.c_branch }}</div>
+        <hr>
+        <div  style="color: white;margin-left: 10px;">Company Name :<span style="color:yellow;" > &nbsp  {{ company }}</span> </div>
+
+        <hr>
+        <div  style="color: white;margin-left: 10px;">Job Position : <span style="color:yellow;" > &nbsp {{ item.c_position }}</span></div>
+
+        <hr>
+        
+        <div  style="color: white;margin-left: 10px;">Job Description :<span style="color:yellow;" > &nbsp {{ item.c_description }}</span></div>
+        
+        <hr>
+        <div  style="color: white;margin-left: 10px;">CTC offered :<span style="color:yellow;" > &nbsp {{ item.c_ctc_offered }}</span></div>
+        <hr>
+        <div  style="color: white;margin-left: 10px;">Degree Required:<span style="color:yellow;" > &nbsp {{ item.c_course }}</span></div>
+    
+        <hr>
+        <div  style="color: white;margin-left: 10px;">Branch Required:<span style="color:yellow;" > &nbsp {{ item.c_branch }}</span></div>
+    
+        <hr>
         <div>   <form class="form-horizontal " action="/company/applied_msg/{{ item.id }}" method="post" enctype="multipart/form-data">
                         <!--this is for security pupose against click jacking -->
                         {% csrf_token %}
