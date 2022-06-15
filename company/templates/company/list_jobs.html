@@ -7,9 +7,9 @@
 {%block main_body%}
 
 <div class="table-responsive listing">
-<h1 class="bg-primary text-center" style="font-size:3rem ;color:yellow; margin-top:-70px; padding-bottom: 15px; padding-top: 10px; ">Posted Job List</h1>
-    <table class="table table-bordered bg-primary">
-    <tr style="color: pink;">
+<h1 class=" text-center" style="background-color: slategray; font-size:3rem ;color:yellow; margin-top:-10px; padding-bottom: 15px; padding-top: 10px; ">Posted Job List</h1>
+    <table style="background-color: slategray;" class="table table-bordered ">
+    <tr style="color: black;">
         <th>Job ID</th>
         <th>Job Position</th>
         <th>Company ID</th>
@@ -21,7 +21,7 @@
         <!-- <th>Students Applied</th> -->
     </tr>
     {% for item in form %}
-    <tr>
+    <tr style="color: wheat;" >
         <td>{{ item.id}}</td>
         <td>{{ item.c_position }}</td>
         <td>{{ item.register_id }}</td>

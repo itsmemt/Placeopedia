@@ -13,7 +13,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 SECRET_KEY = '%k)fknwsl(h7er6nijamwy=!ju(mv-#zil2krl81fr2f5$6v(('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost','placeopedia.herokuapp.com']
 
